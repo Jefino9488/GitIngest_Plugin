@@ -8,17 +8,35 @@
   <name>Gitingest</name>
 
   <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-  <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+  <vendor email="jefinojacob9488@gmail.com" url="https://github.com/Jefino9488">Jefino9488</vendor>
 
   <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
        Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
        Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
   <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
-  ]]></description>
+    The <b>Gitingest Plugin</b> is a powerful tool designed to streamline the process of generating and managing code digests for your Git repositories directly within PyCharm.<br>
+    <br>
+    With this plugin, you can:
+    <ul>
+        <li>Automatically generate a <code>digest.txt</code> file for the current project or directory.</li>
+        <li>Check and install the <code>gitingest</code> Python module seamlessly from within the IDE.</li>
+        <li>Run <code>gitingest</code> commands without leaving PyCharm, saving you time and effort.</li>
+    </ul>
+    <br>
+    <em>Key Features:</em>
+    <ul>
+        <li>Integration with PyCharm's UI for a seamless user experience.</li>
+        <li>Background execution of <code>gitingest</code> to keep the IDE responsive.</li>
+        <li>Automatic installation of the <code>gitingest</code> module if not already installed.</li>
+        <li>Support for generating digests for the currently open file's directory.</li>
+    </ul>
+    <br>
+    Whether you're working on a small project or a large codebase, the <b>Gitingest Plugin</b> helps you maintain a clean and organized repository by generating concise and informative digests.<br>
+    <br>
+    <em>Note:</em> Ensure that Python and <code>pip</code> are installed and properly configured on your system for the plugin to function correctly.
+]]></description>
 
-  <!-- Product and plugin compatibility requirements.
+  <!-- Product and plugin compatibility re$defaultquirements.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
   <depends>com.intellij.modules.platform</depends>
   <depends>com.intellij.modules.python</depends>
@@ -30,9 +48,9 @@
   </extensions>
   <actions>
     <action id="com.gitingest.gitingest.GenerateIngestAction" class="com.gitingest.gitingest.GenerateIngestAction"
-            text="Generate Ingest" description="Generates an ingest of the current project">
-      <add-to-group group-id="ToolsMenu" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="ctrl G"/>
+            text="Gitingest" description="Generates an ingest of the current project">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
     </action>
   </actions>
 </idea-plugin>
